@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loops</title>
+  </head>
+
+  <body>
+    <h1>Hi! Cypher</h1>
+
+    <script>
+      // Loops in Javascript
+
+      // for loop
+      var arr = [1, 2, 3, 4, 5, "sunil", 6, 7, 8, 9];
+      console.log(arr);
+      for (var i = 0; i < 3; i++) {
+        console.log(arr[i]);
+      }
+
+      // foreach loop is a good way to iterate array.
+      console.log("For loop:");
+      var arr = [1, 2, 3, 4, 5, "sunil", 6, 7, 8, 9];
+      arr.forEach(function (element) {
+        console.log(element);
+      });
+
+      // while loop checks the condition first then only enters inside loop.
+      // let is used to declare a block level variables i.e it scopes inside {} only.
+      console.log("while loop:");
+      let j = 0;
+      var arr = [22, 33, 44, 55, 66, 77, 88, 99, 111];
+      while (j <= 4) {
+        console.log(arr[j]);
+        j++;
+      }
+
+      // do-while loop runs at least once and then check condition.
+      console.log("do-while loop:");
+      let k = 2;
+      var arr = [22, 33, 44, 55, 66, 77, 88, 99, 111];
+      do {
+        console.log(arr[k]);
+        k++;
+      } while (k <= 3);
+    </script>
+  </body>
+</html>

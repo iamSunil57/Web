@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Break and Continue</title>
+  </head>
+
+  <body>
+    <h1>Hi! Cypher</h1>
+
+    <script>
+      // Break and Continue statement can used in any loops
+
+      // break statment stops the looping
+      var arr = [1, 2, 3, 4, 5, "sunil", 6, 7, 8, 9];
+      console.log(arr);
+      for (var i = 0; i < 5; i++) {
+        if (i == 3) {
+          break;
+        }
+        console.log(arr[i]);
+      }
+
+      // Continue statement skip the one and continue other
+      var arr = [1, 2, 3, 4, 5, "sunil", 6, 7, 8, 9];
+      console.log(arr);
+      for (var i = 0; i < 5; i++) {
+        if (i == 3) {
+          continue;
+        }
+        console.log(arr[i]);
+      }
+
+      // ARRAY METHODS
+      console.log("Array Methods:");
+      let myArr = ["fan", "sunil", 55, null, true, 23, "dexter", "cypher", 77];
+      console.log(myArr.length);
+      console.log(myArr);
+
+      myArr.pop(); // .pop method removes the last element of array
+      console.log(myArr);
+
+      myArr.push("harry"); // .push method add element at the end of array
+      console.log(myArr);
+
+      myArr.shift(); // .shift method removes the first element of array
+      console.log(myArr);
+
+      myArr.unshift("kuber"); // .unshift method add the first element of array
+      console.log(myArr);
+
+      myArr.toString(); // converts array into string
+      myArr.sort(); // it converts array into string and arrange number first and then other values according to dictionary
+    </script>
+  </body>
+</html>

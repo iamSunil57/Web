@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SetTimeout and SetInterval</title>
+  </head>
+
+  <body>
+    <h1>Hi! Sunil</h1>
+
+    <div id="firstContainer" class="container primary">
+      <button id="click" onclick="clicked()">Click</button>
+      <h1>Sunil Chand</h1>
+    </div>
+
+    <div class="container">
+      <p>This is paragraph.</p>
+    </div>
+
+    <script>
+      // Arrow function
+
+      sum = (a, b) => {
+        return a + b;
+      };
+      // instead of
+      function sum(a, b) {
+        return a + b;
+      }
+
+      // setTimeout and setInterval
+
+      x = () => {
+        console.log("I am log");
+      };
+
+      // setTimeout takes function as first argument and second one is the time in milisecond.
+      //It is used for scheduling the task.
+      setTimeout(x, 3000);
+
+      // setInterval is used to perform repetitive task
+      setInterval(x, 3000);
+
+      // Id of setTimeout is assigned to halt and clearTimeout() cancel that function
+      halt = setInterval(x, 3000);
+      clearTimeout(halt);
+
+      // To stop this repetitive task
+      // Id of setInterval is assigned to clr and clearInterval() cancel that function
+      clr = setInterval(x, 3000);
+      clearInterval(clr);
+    </script>
+  </body>
+</html>

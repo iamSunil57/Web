@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Corrected "function" to "function"
+
+        document.querySelector("form").onsubmit = function () {
+          // Fetch exchange rate data
+          fetch("https://api.fastforex.io/fetch-all?api_key=YOUR_API_KEY")
+            .then((response) => response.json()) // Converts exchange rate data into JSON
+            .then((data) => {
+              // Process the converted data
+              console.log("Data:", data); // Log the data to check its structure
+
+              const currency = document
+                .querySelector("#currency")
+                .value.toUpperCase(); // Convert input to uppercase
+              console.log("Currency:", currency); // Log the currency input
+
+              const rate = data.rates[currency]; // Access the rate for the input currency
+              console.log("Rate:", rate); // Log the rate to see if it's correctly accessed
+
+              // Display the result or an error message
+              if (rate !== undefined) {
+                document.querySelector(
+                  "#result"
+                ).innerHTML = `1 USD is equal to: ${rate.toFixed(
+                  3
+                )} ${currency}.`;
+              } else {
+                document.querySelector("#result").innerHTML =
+                  "Invalid Currency.";
+              }
+            })
+            .catch((error) => {
+              // Handle any errors during the fetch process
+              console.log("Error:", error);
+            });
+
+          return false; // Prevent default form submission
+        };
+      });
+    </script>
+  </head>
+  <body>
+    <form action="">
+      <input type="text" placeholder="currency" id="currency" />
+      <input type="submit" />
+    </form>
+    <div id="result"></div>
+  </body>
+</html>

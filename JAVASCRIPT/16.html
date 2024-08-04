@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local Storage</title>
+  </head>
+
+  <body>
+    <h1>Hi! Sunil</h1>
+
+    <div id="firstContainer" class="container primary">
+      <button id="click" onclick="clicked()">Click</button>
+      <h1>Sunil Chand</h1>
+    </div>
+
+    <div class="container">
+      <p>This is paragraph.</p>
+    </div>
+
+    <script>
+      // LOCAL STORAGE
+      // It is used to store data in user computer as a string.
+      // Each domain have their own local storage
+      // Store less amount of data and don't store sensitive data
+
+      localStorage.setItem("name", "sunil"); // to store the items
+
+      localStorage.setItem("age", "23");
+
+      localStorage.clear(); // to clear the whole storage
+
+      localStorage; // provide all stored item details
+
+      localStorage.remove("name"); // To remove single item from storage
+
+      localStorage.getItem("name"); // to get the stored items
+    </script>
+  </body>
+</html>

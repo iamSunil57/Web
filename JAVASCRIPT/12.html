@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+
+  <body>
+    <h1>Hi! Sunil</h1>
+
+    <div class="container">
+      <button id="click">Click</button>
+      <h1>Sunil Chand</h1>
+    </div>
+
+    <div class="container">
+      <p>I am Cypher and I am from Dhangadhi,Kailali.</p>
+    </div>
+
+    <script>
+      // DOM can be used to excess the html page elements
+      // DOM methods are used to manipulate html page and make them dynamic.
+      // It helps to change the content of html page on user interaction.
+
+      document.getElementById("click").click();
+      document.getElementById("click").style.border = "2px solid green";
+
+      // DOM Methods
+
+      // To find element by Id.
+      let ele = document.getElementById("click"); //used to target element by its ID.
+      console.log(ele);
+
+      // To find element by className
+      let eleClass = document.getElementsByClassName("container"); //used to target element by its class.
+      console.log(eleClass);
+      eleClass[0].style.background = "purple"; // [0] count of first container class
+      eleClass[1].style.background = "yellowgreen"; // [1] count of second container class
+      eleClass[1].classList.add("primary"); // .add is used to adds another class
+      eleClass[1].classList.add("text");
+      eleClass[1].classList.remove("text"); // .remove is used to remove the class
+
+      // eleClass[0].innerHTML                           // .innerHTML is used to excess inner html of any elements
+      // eleClass[0].innerText                           // .innerText gives the text of targeted element
+      // OR
+      console.log(ele.innerHTML);
+      console.log(ele.innerText);
+
+      console.log(eleClass[1].innerHTML);
+      console.log(eleClass[1].innerText);
+
+      // To find element by tagname
+      let x = document.getElementsByTagName("div");
+      console.log(x);
+
+      // To create a child .appendChild method is used.
+
+      let createdElement = document.createElement("p");
+      createdElement.innerText = "This is a created paragraph.";
+      x[0].appendChild(createdElement); // x[0] is first div obtained from above
+
+      // To replace the child
+      let createdElement1 = document.createElement("b");
+      createdElement1.innerText = "This is a created bold";
+      x[0].replaceChild(createdElement1, createdElement); // first replacer and then replacing child
+
+      let createdElement2 = document.createElement("h1");
+      createdElement2.innerText = "This is a created h1";
+      x[0].appendChild(createdElement2);
+      x[0].removeChild(createdElement2); // removes child from the element
+    </script>
+  </body>
+</html>

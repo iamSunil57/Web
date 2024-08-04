@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON</title>
+  </head>
+
+  <body>
+    <h1>Hi! Sunil</h1>
+
+    <div id="firstContainer" class="container primary">
+      <button id="click" onclick="clicked()">Click</button>
+      <h1>Sunil Chand</h1>
+    </div>
+
+    <div class="container">
+      <p>This is paragraph.</p>
+    </div>
+
+    <script>
+      // JAVASCRIPT OBJECT NOTATION (JSON)
+      // It is a open standard file format which is used to exchange the data
+      // We can transport the data by converting json data into string and converted that string into javascript object later.
+
+      // JSON.stringify converts the object into json string
+      // JSON accepts double-quote only
+
+      // Here 'a' is another object inside the object
+      obj = { name: "Sunil", length: 1, a: { this: "that" } };
+      js = JSON.stringify(obj);
+      console.log(js);
+      console.log(typeof js);
+      // 'typeof js' to know the type of value
+
+      // JSON.parse takes input as string inside back-tick(``):
+      // parsed = JSON.parse(`{"name":"Sunil","length":1,"a":{"this":"tha\\"t"}}`); // To handel (") double-quote  '\\' is used.
+      parsed = JSON.parse(`{"name":"Sunil","length":1,"a":{"this":"that"}}`);
+      console.log(parsed);
+    </script>
+  </body>
+</html>

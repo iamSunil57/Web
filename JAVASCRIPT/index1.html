@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hello! Cypher</h1>
+
+    <script>
+      // Function in Javascript
+
+      function avg(a, b) {
+        c = (a + b) / 2;
+        return c;
+      }
+      // DRY= Do not repeat yourself
+      c1 = avg(4, 6);
+      c2 = (54, 89);
+      console.log(c1, c2);
+
+      // Conditionals in Javascript
+      // 1. if-else
+
+      var age = 22;
+      if (age > 18) {
+        console.log("Your are adult.");
+      } else {
+        console.log("You are a kid.");
+      }
+
+      // if-else ladder
+
+      var age = 17;
+      if (age <= 12) {
+        console.log("you are a kid");
+      } else if (age <= 19) {
+        console.log("your a teenager.");
+      } else if (age < 50) {
+        console.log("You are a man.");
+      } else {
+        console.log("you are old.");
+      }
+
+      // Loops
+
+      // Non-changeable variable
+      const z = 0;
+      z = z + 1;
+
+      // for loop
+      var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      console.log(arr);
+      for (var i = 0; i < arr.length; i++) {
+        console.log(arr[i]);
+      }
+      /* OR
+ arr.forEach(function(element){
+    console.log(element);
+}) */
+
+      // While loop
+      var arr = [1, 2, 3, 4, 5, 6, 7];
+      let j = 0;
+      while (j < arr.length) {
+        console.log(arr[j]);
+        j++;
+      }
+
+      // do-while
+      var arr = [1, 2, 3, 4, 5];
+      let s = 0;
+      do {
+        console.log(arr[s]);
+        s++;
+      } while (s < arr.length);
+
+      // Continue statement
+      var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      console.log(arr);
+      for (var i = 0; i < arr.length; i++) {
+        if (i == 2) {
+          // left that array and continue other
+          continue;
+        }
+        console.log(arr[i]);
+      }
+
+      // Break statement
+      var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      console.log(arr);
+      for (var i = 0; i < arr.length; i++) {
+        if (i == 2) {
+          break;
+        }
+        console.log(arr[i]);
+      }
+
+      // Arrays method
+      let myArr = ["fan", "camera", 35, null, true];
+      console.log(myArr);
+      console.log(myArr.length);
+      myArr.pop(); // remove last element
+      console.log(myArr);
+      myArr.shift(); // remove first element
+      console.log(myArr);
+      myArr.unshift("Jerry"); // add element to first
+      console.log(myArr);
+      myArr.push("sunil", "cypher"); //add element to last
+      console.log(myArr);
+      myArr.toString(); // convert array to string
+      myArr.sort(); // arrange alphabetically
+
+      // String methods in javascript
+      let x = "His name is Cypher. He is CSIT aspirant.";
+      console.log(x.length);
+      console.log(x.indexOf("is")); //count starts from 0
+      console.log(x.lastIndexOf("is")); //if same words "is" are present then it will choose the last one.
+      console.log(x.slice(4, 6)); //shows character between given input iclude starting but excluding ending
+      console.log(x.replace("Cypher", "Sunil")); //just replace the first occurrence element.
+
+      //Date in javascript
+      let myDate = new Date(); //keyword "new" is used to create new date
+      console.log(myDate);
+      console.log(myDate.getTime()); // gives time in second
+      console.log(myDate.getFullYear());
+      console.log(myDate.getDay()); // day start from 0
+      console.log(myDate.getMinutes());
+      console.log(myDate.getHours());
+    </script>
+  </body>
+</html>

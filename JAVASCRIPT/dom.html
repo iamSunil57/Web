@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript</title>
+    <style>
+      .bg-primary {
+        background: blueviolet;
+      }
+      .text {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Welcome to this Javascript Tutorial</h1>
+    <div id="firstcontainer" class="container">
+      <button id="click" class="container">click me</button>
+      <p>This is just a paragraph.</p>
+    </div>
+
+    <script>
+      //Document object model(DOM) Manipulation
+      //It is used to excess our Html pages elements.
+
+      let ele = document.getElementById("click");
+      console.log(ele);
+      console.log(ele.innerHTML); // shows html code of called element
+      console.log(ele.innerText); // shows content of called element
+
+      let eleClass = document.getElementsByClassName("container");
+      console.log(eleClass);
+      //eleClass[0].style.background= 'yellow';
+      eleClass[0].classList.add("bg-primary"); // add class "bg-primary" to eleClass from style (CSS).
+      eleClass[0].classList.add("text");
+      eleClass[0].classList.remove("text"); //remove class "text from eleClass"
+      console.log(eleClass[0].innerHTML);
+      console.log(eleClass[0].innerText);
+
+      let tn = document.getElementsByTagName("button"); //shows all tagname "button"
+      console.log(tn);
+
+      let dv = document.getElementsByTagName("div"); //shows all tagname "div"
+      console.log(dv);
+      createdElement = document.createElement("p"); //createElement creates new child
+      createdElement.innerText = "This is a created paragraph.";
+      tn[0].appendChild(createdElement); // tn[0] means first div here and append adds child in that div
+      createdElement2 = document.createElement("b");
+      createdElement2.innerText = "This is a created bold.";
+      tn[0].replaceChild(createdElement2, createdElement); //replaceChild replaces the child
+      removeChild(element); //removes an element
+    </script>
+  </body>
+</html>

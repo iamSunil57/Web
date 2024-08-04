@@ -1,0 +1,44 @@
+<!-- DOM to manipulate the html code -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello</title>
+    <script>
+        function hello() {
+
+            // documnet.querySelector is a DOM that extracts the individual element of html page and manipulates it using javascript
+            // in conditions '==' is used to check values while '===' is used to check both types and values
+
+            /*
+            if (document.querySelector('h1').innerHTML === "Hello!"){       
+                document.querySelector('h1').innerHTML = "Goodbye!";  
+            }
+            else{
+                document.querySelector('h1').innerHTML = "Hello!";   
+        }*/
+            // OR
+            let heading = document.querySelector('h1');   // heading is a variable here
+            if (heading.innerHTML === "Hello!") {       
+                heading.innerHTML = "Goodbye!";
+            }
+            else {
+                heading.innerHTML = "Hello!";
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Hello!</h1>
+    <button onclick="hello()">click here</button>
+    <!-- hello() function is called -->
+
+</body>
+
+</html>

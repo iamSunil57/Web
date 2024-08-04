@@ -1,0 +1,51 @@
+<!--  Input type attributes -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <h1>Facebook</h1>
+      <!-- type tag determines user input whether its text,date or password -->
+      <!-- size tag determines input element width -->
+      <!-- maxlength specifies max input field character -->
+      <!-- required tag makes an input field to be filled compulsory -->
+      <input
+        type="text"
+        placeholder="enter your name"
+        size="15"
+        maxlength="20"
+        required="name"
+      /><br />
+      <br />
+      <input
+        type="password"
+        placeholder="enter password"
+        size="15"
+        maxlength="20"
+        required="password"
+      /><br />
+      <br />
+      <input type="date" /><br />
+      <br />
+      <!-- name tag specifies name of input field -->
+      <input name="text" value="hello" />
+      <br />
+      <textarea
+        name="explain"
+        id="explain"
+        placeholder="Briefly explain about yourself."
+        cols="30"
+        rows="10"
+      ></textarea
+      ><br />
+      <br />
+      <input type="Submit" />
+    </ul>
+  </body>
+</html>

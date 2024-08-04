@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript</title>
+  </head>
+  <body>
+    <h1>Welcome to this Javascript Tutorial</h1>
+    <div id="firstcontainer" class="container">
+      <button id="btn">click me</button>
+    </div>
+
+    <script>
+      // Javascript Object Notation(JSON)
+      // It is a open standard file format that is used exchange data
+      // JSON is converted into string to transport data well and called later to make it javascript object
+      //JSON accepts double quote only
+
+      obj = { name: "ram", length: 1, a: { i: "am", sunil: "cypher" } }; //object
+      jso = JSON.stringify(obj); // convert object into string
+      console.log(jso);
+      console.log(typeof jso); //returns the type of data
+
+      parsed = JSON.parse(
+        `{"name":"ram","length":1,"a":{"i":"am","sunil":"cypher"}}`
+      ); // parse converts string to object
+      console.log(parsed);
+
+      // Template literals or Backticks
+
+      a = 34;
+      console.log(`Hi is ${a} years old.`); // `` is backtick symbol
+    </script>
+  </body>
+</html>

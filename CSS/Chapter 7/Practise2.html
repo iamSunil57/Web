@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            padding: 15px;
+        }
+        li{
+            display: inline;
+            list-style: none;
+            padding: 0 10px;
+        }
+        header{
+            background-color: rgb(3, 68, 187);
+            color: white;
+            height: 7vh;
+    
+        }
+        .container{
+            display: inline-grid;
+            justify-content: space-between;
+            grid-template-columns: auto auto;
+        }
+        @media screen and (max-width: 800px){
+            header{
+                background-color: rgb(14, 228, 74);
+            }
+            body{
+                background-color: brown;
+            }
+        }
+        @media screen and (max-width: 600px){
+            body{
+                background-color: yellowgreen;
+            }
+          
+        }
+        .left{
+            height: 50vh;
+            width: 50vh;
+            background-color: blueviolet;
+            
+            
+        }
+        .right{
+            height: 50vh;
+            width: 50vh;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+
+    </header>
+    <div class="container">
+        <div class="left">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero eaque quos quas. Aspernatur ipsam id, nobis soluta facere saepe rem.
+        </div>
+        <div class="right">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti at eveniet consequuntur illo ducimus ipsum dolor magnam voluptate voluptatem et!
+
+        </div>
+
+    </div>
+</body>
+</html>

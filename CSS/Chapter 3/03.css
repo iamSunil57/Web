@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.red{
+    color: black;
+    height: 100px;
+    background-color: yellowgreen;
+}
+.green{
+    /* Giving color values using RGB,HEX or HSL */
+    color: black;
+    background-color: rgba(68, 147, 37, 0.376);
+}

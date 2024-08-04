@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript</title>
+    <style>
+      .bg-primary {
+        background: blueviolet;
+      }
+      .text {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Welcome to this Javascript Tutorial</h1>
+    <div id="firstContainer" class="container">
+      <button id="click" class="container" onclick="clicked()">click me</button>
+      <p>This is just a paragraph.</p>
+    </div>
+
+    <script>
+      // Selecting using query
+
+      sel = document.querySelector(".container"); //gives first container class
+      console.log(sel);
+
+      sel = document.querySelectorAll(".container");
+      console.log(sel);
+
+      function clicked() {
+        console.log("The button was clicked.");
+      }
+      window.onload = function () {
+        console.log("The page is loaded.");
+      };
+
+      // Events in Javascript
+      let preHTML = document.querySelectorAll(".container")[1].innerHTML;
+      // firstContainer.addEventListener('click',function(){         //click is a event
+      //     document.querySelectorAll(".container")[1].innerHTML= " <b>You have clicked here.</b> "
+      //     console.log("clicked on container");
+      // })
+
+      // firstContainer.addEventListener('mouseover',function(){     //mouseover is a event
+      //     console.log("mouse in container");
+      // })
+
+      // firstContainer.addEventListener('mouseout',function(){      //mouseout is a event
+      //     console.log("mouse out container");
+      // })
+
+      firstContainer.addEventListener("mouseup", function () {
+        document.querySelectorAll(".container")[1].innerHTML = preHTML;
+        console.log("mouse up container");
+      });
+
+      firstContainer.addEventListener("mousedown", function () {
+        //mousedown if clicked and hold
+        document.querySelectorAll(".container")[1].innerHTML =
+          " <b>You have clicked here.</b> ";
+        console.log("mouse down container");
+      });
+    </script>
+  </body>
+</html>

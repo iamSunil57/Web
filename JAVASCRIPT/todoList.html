@@ -1,0 +1,52 @@
+<!-- TODO list -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO list</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // by default
+        document.querySelector("#submit").disabled = true; // to disable submit button
+
+        document.querySelector("#task").onkeyup = () => {
+          if (document.querySelector("#task").value.length > 0) {
+            document.querySelector("#submit").disabled = false;
+          } else {
+            document.querySelector("#submit").disabled = true;
+          }
+        };
+
+        document.querySelector("form").onsubmit = () => {
+          const task = document.querySelector("#task").value;
+          //console.log(task);
+
+          // To create a new element and add into the body of html in list
+          const li = document.createElement("li");
+          li.innerHTML = task;
+
+          document.querySelector("#tasks").append(li);
+
+          document.querySelector("#task").value = ""; // to clear the value from input field after submit
+
+          document.querySelector("#submit").disabled = true;
+
+          //stop form from submitting
+          return false;
+        };
+      });
+    </script>
+  </head>
+
+  <body>
+    <h1>Tasks</h1>
+    <ul id="tasks"></ul>
+    <form action="">
+      <input id="task" placeholder="New Task" type="text" />
+      <input id="submit" type="submit" />
+    </form>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+
+body{
+    background-color: rgb(224, 228, 229);
+}
+#first{
+    background-color: rgb(201, 255, 66);
+    color:white;
+}
+#Second{
+    background-color: aqua;
+}
+#Third{
+    background-color: rgb(119, 8, 179);
+}

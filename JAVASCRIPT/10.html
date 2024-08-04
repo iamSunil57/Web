@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String Methods</title>
+  </head>
+
+  <body>
+    <h1>Hi! Sunil</h1>
+
+    <script>
+      // Strings Methods
+
+      let myString = "My name is Sunil Chand.Sunil am from Dhangadhi,Kailali.";
+      console.log(myString.length); // counts space also
+      console.log(myString.indexOf("Sunil")); // gives start count of sunil if there are multiple same words then also gives count of first one.
+      console.log(myString.lastIndexOf("Sunil")); // gives start count of last 'sunil' if there are multiple same words
+      console.log(myString.slice(0, 4)); // slice takes the given no. of character counting space too not exclude the ending
+      console.log(myString.replace("Sunil", "Cypher")); // replace the first occurrrence only.
+    </script>
+  </body>
+</html>

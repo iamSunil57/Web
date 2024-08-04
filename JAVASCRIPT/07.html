@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conditionals</title>
+  </head>
+
+  <body>
+    <h1>Hi! Cypher</h1>
+
+    <script>
+      // Conditionals in Javascript
+
+      // Single if statement
+      var age = 12;
+      if (age < 18) {
+        console.log("You are a child");
+      }
+
+      // if-else statement
+      var age = 45;
+      if (age < 18) {
+        console.log("You are a child.");
+      } else {
+        console.log("You are an adult");
+      }
+
+      // if-else ladder
+      var age = 65;
+      if (age < 18) {
+        console.log("You are a child.");
+      } else if (age < 40) {
+        console.log("You are an adult");
+      } else if (age < 60) {
+        console.log("You are an early old");
+      } else {
+        console.log("You are old.");
+      }
+
+      // Condition using function:
+      function age(a) {
+        if (a < 18) {
+          console.log("You are a child");
+        } else if (a > 18 && a < 40) {
+          console.log("You are an adult");
+        } else if (a > 40 && a < 60) {
+          console.log("You are in early old");
+        } else {
+          console.log("You are an old");
+        }
+      }
+      x = age(57);
+      console.log(x);
+    </script>
+  </body>
+</html>

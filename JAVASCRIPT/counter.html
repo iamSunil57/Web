@@ -1,0 +1,34 @@
+<!-- Counter -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <script>
+        let counter = 0;   /* way to define a variable*/
+        function count(){
+            counter++;
+            document.querySelector("h1").innerHTML= counter;
+
+            //if( counter % 10 == 0){
+            //    alert(`Now the count is: ${counter}`);
+            //}
+        }
+
+        document.addEventListener("DomContentLoaded", function(){
+            
+            document.querySelector('button').onclick = count;
+
+            // automatically update counter after given time interval(miliseconds)
+            setInterval(count, 1000); // not working setInterval is a in-built function in javascript
+        });
+    </script>
+</head>
+<body>
+    <h1>0</h1>
+    <button onclick="count()">Count</button>
+</body>
+</html>

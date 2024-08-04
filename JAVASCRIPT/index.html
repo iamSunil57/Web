@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript</title>
+  </head>
+  <body>
+    <h1>Welcome to this Javascript Tutorial</h1>
+    <div id="firstcontainer" class="container">
+      <button id="btn">click me</button>
+    </div>
+
+    <script>
+      // 1. Way to print in javascript
+      // console.log("hello world!");
+      // alert("error");
+
+      // 2. Javascript console API
+      console.log("hello world!", 5 + 6, "another log");
+      console.warn("This is warning");
+      console.error("error found");
+
+      // 3. Javascript Variables
+      // variables == container to store values
+
+      var var1 = 34;
+      var var2 = 54;
+      console.log(var1 + var2);
+
+      /* multi line comments */
+
+      // 4. Data types in javascript
+      //numbers
+
+      var num1 = 5;
+      var num2 = 9;
+
+      //strings
+      var str1 = "This is me";
+      var str2 = "Cypher";
+
+      //objects
+      var marks = {
+        sunil: 99,
+        kuber: 95,
+        sagar: 99,
+      };
+      console.log(marks);
+
+      // booleans
+      var a = true;
+      var b = false;
+      console.log(a, b);
+
+      // var und= undefined,create variable and left
+      var und;
+      console.log(und);
+
+      // null, non-storing variable
+      var n = null;
+      console.log(n);
+
+      /* There are two types of data types in Javascript
+1. Primitive: undefined,null,number,string,boolean,symbol
+2. Reference: Arrays and objects*/
+
+      var arr = [1, 2, 3, "string", 4, 5];
+
+      // Operators
+
+      // 1. Arithematic operators
+      var a = 45;
+      var b = 77;
+      console.log("Result:", a + b);
+      console.log("Result:", a - b);
+      console.log("Result:", a * b);
+      console.log("Result:", a / b);
+
+      // Assignment operators
+      c = b;
+      c += 3;
+      c = c - 2;
+      c *= 3;
+      c /= 2;
+      console.log(c);
+
+      // Comparison operators (==,<=,>=,!=,<,>)
+      var x = 34;
+      var y = 45;
+      console.log(x != y);
+      console.log(x == y);
+
+      // Logical operators ( &&, ||, !)
+
+      //logical and
+      console.log(true && true);
+      console.log(true && false);
+      console.log(false && true);
+      console.log(false && false);
+
+      //logical or
+      console.log(true || true);
+      console.log(true || false);
+      console.log(false || true);
+      console.log(false || false);
+
+      //logical not
+      console.log(!true);
+      console.log(!false);
+    </script>
+  </body>
+</html>

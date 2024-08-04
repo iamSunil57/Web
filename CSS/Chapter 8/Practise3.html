@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .slider {
+            background-color: aqua;
+            height: 523px;
+            overflow: hidden;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        .img1 {
+
+            transform: translate(-34vw);
+
+            animation: slide1 2s infinite forwards;
+        }
+
+        .img2 {
+
+            transform: translate(0vw);
+
+
+
+        }
+
+        .img3 {
+
+            transform: translate(34vw);
+            animation: slide2 2s infinite forwards;
+        }
+
+        img {
+            height: 75vh;
+            width: 60vw;
+            display: block;
+            margin: auto;
+        }
+
+        @keyframes slide1 {
+            0% {
+                transform: translate(50vw);
+            }
+
+            100% {
+                transform: translate(-34vw);
+            }
+
+
+        }
+
+        @keyframes slide2 {
+            0% {
+                transform: translate(34vw);
+            }
+
+            100% {
+                transform: translate(-50vw);
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="slider">
+            <img class="img1" src="0123.jpg" alt="hiii">
+            <img class="img2" src="0123.jpg" alt="hiii">
+            <img class="img3" src="0123.jpg" alt="hiii">
+        </div>
+    </main>
+</body>
+<script>
+
+
+</script>
+
+</html>

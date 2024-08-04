@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        ul{
+            background-color: red;
+        }
+        li{
+            
+            list-style: square inside;
+        }
+        header{
+            background-color: black;
+            color: white;
+            height: 35px;
+            position: sticky;
+            z-index: 1;
+        }
+        .hi{
+            text-align: center;
+            border: 2px solid red;
+        }
+        .container{
+            background-color: blueviolet;
+            height: 50vh;
+            width: 50vw;
+            padding: 0 25px;
+            position: relative;
+            z-index: 2;
+        }
+        .box{
+            height: 200px;
+            width: 200px;
+            background-color: lightskyblue;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .box2{
+            height: 200px;
+            width: 200px;
+            background-color: rgb(27, 189, 8);
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <p class="hi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus maiores reprehenderit facere, voluptatum libero quo omnis itaque, repudiandae ab placeat, fuga expedita. Excepturi porro id similique nesciunt, facilis nemo possimus saepe amet, necessitatibus iure ullam.
+        </p>
+        <div class="box">
+            This is box.
+        </div>
+        <div class="box2">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat atque assumenda quos alias eum sed, sunt dolore! Sapiente non facere rerum fugiat quod laborum consequatur!
+        </div>
+    </div>
+    <ul>
+        <li>Apple</li>
+        <li>Mango</li>
+    </ul>
+
+</body>
+
+</html>

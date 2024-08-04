@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript</title>
+  </head>
+  <body>
+    <h1>Welcome to this Javascript Tutorial</h1>
+    <div id="firstcontainer" class="container">
+      <button id="btn">click me</button>
+    </div>
+
+    <script>
+      // Arrow function
+
+      sum = (a, b) => {
+        //Arrow function is used to insert function in between
+        return a + b;
+      };
+      sum(5, 7);
+
+      /* Or we can write function as:
+
+function sum(a,b){
+    return a+b;
+} */
+
+      // setTimeout and setInterval function
+      log = () => {
+        console.log("i am log");
+      };
+      setTimeout(log, 5000); // its firt argument is function and second is the time(miliseconds) after you want to execute
+      clr = setTimeout(log, 5000);
+      clearsetTimeout(clr); //it cancels the setTimeout
+      setInterval(log, 5000); // same as setTimeout but perform repeatedly
+      clr = setInterval(log, 5000);
+      clearInterval(clr); // it cancels the setInterval
+
+      // Javascript localStorage
+      // used to store data in user's computer as a string
+      // don't store sensitive data in localStorage
+
+      localStorage.setItem("name", "Cypher"); // set values
+      localStorage; //shows values
+      localStorage.clear(); //clear values from domain
+      localStorage.getItem("name"); //return values after it has been set
+    </script>
+  </body>
+</html>

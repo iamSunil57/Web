@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Manipulation</title>
+  </head>
+
+  <body>
+    <h1>Hi! Sunil</h1>
+
+    <div class="container">
+      <button id="click">Click</button>
+      <h1>Sunil Chand</h1>
+    </div>
+
+    <div class="container">
+      <p>I am Cypher and i am from Dhangadhi,Kailali.</p>
+    </div>
+
+    <script>
+      // Methods
+
+      // document.location;
+      // document.title;        //provides title
+      // document.URL;          //gives
+      // document.scripts;      //gives all available scripts
+      // document.links;        //gives all available links
+      // document.images;       //gives all available images
+      // document.forms;        //gives variable forms
+      // document.domain;       //gives domain without port
+
+      //SELECTING USING QUERY
+
+      sel = document.querySelector(".container"); //gives first 'container' class
+      console.log(sel);
+
+      sel = document.querySelectorAll(".container"); //gives all 'container' class
+      console.log(sel);
+
+      x = document.querySelector("#click"); //gives first 'click' id
+      console.log(x);
+    </script>
+  </body>
+</html>
